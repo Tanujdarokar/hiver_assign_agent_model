@@ -1,0 +1,50 @@
+
+════════════════════════════════════════════════════════════
+Brand: AmazonHelp
+════════════════════════════════════════════════════════════
+
+  ── Conversation 288d4df07c37… (3 turns) ──
+  [CUSTOMER] Si quieres cambiar cualquier detalle de tu pedido, puedes hacerlo desde "Mi cuenta" y ya entrar en pedidos, pagos, etc.
+  [CUSTOMER] Como se puede solicitar que no me haga entregas, tourline simpre que me envian algo con ellos tengo problemas, no llega a tiempo y mienten diciendo que no habia nadie en el domicilio, cuando es mentir
+  [SUPPORT]  Hola Pendri, puedes comunicarte con nuestros compañeros de Servicio al Cliente para que ellos puedan levantar una reclamación a tu nombre con respecto a lo sucedido. Para hacerlo sigue el enlace a con
+
+  ── Conversation fca04ff14c60… (7 turns) ──
+  [CUSTOMER] Para nuestro servicio de atención al cliente: http://t.co/K9zglZw4 Y haced clic en "Contacto", a la derecha de la pantalla
+  [CUSTOMER] Si un pedido tiene entrega garantizada para una fecha y justo cuando llega el día te avisan de que se retrasa como se reclama
+  [CUSTOMER] Al final no te dan solución
+  [SUPPORT]  Hola, lamentamos esto. Puedes contactar a nuestro SAC para que se verifique lo ocurrido: https://t.co/OjvUxwnzPe ^AV
+  [SUPPORT]  Hola Alfredo, sin compartir información sensible de tu cuenta como números de pedido, puedes indicarnos ¿cómo podemos ayudarte? ^MZ
+  [CUSTOMER] Tengo abiertas reclamaciones y no me dais respuesta.
+  [SUPPORT]  ¿Podrías comentarnos más sobre lo que ha ocurrido sin publicar detalles de tu cuenta? ^DA
+
+════════════════════════════════════════════════════════════
+Brand: AppleSupport
+════════════════════════════════════════════════════════════
+
+  ── Conversation 2c76d0df75af… (1 turns) ──
+  [SUPPORT]  Welcome to... https://t.co/EZA8eRycDs
+
+  ── Conversation 1809a7e15a70… (3 turns) ──
+  [CUSTOMER] Howdy. Today I started getting a "No Sim Card Installed" message on my iPhone 6. I'm running 9.2.1
+???
+  [SUPPORT]  We would love to help fix this. Follow these steps and DM us if you need further assistance: https://t.co/UTP2qBzCA0
+  [CUSTOMER] Howdy. I will be upgrading my 7 to the X very early in the morning on the 27th. Will there be an Apple battery case for the X eventually?
+
+════════════════════════════════════════════════════════════
+Brand: MicrosoftHelps
+════════════════════════════════════════════════════════════
+
+  ── Conversation 156a0ff31a18… (6 turns) ──
+  [CUSTOMER] So many spam wordpress signups from @123196.com addresses...
+  [SUPPORT]  We'd like to help. Do you mind clarifying the issue? Is your account spending out spam or receiving spam emails? ^SC
+  [CUSTOMER] @701772 I'm getting a full load of spam(around 15k sign-up mail) in my mailbox. #spam #WordPress #Outlook
+  [SUPPORT]  Hi. Thanks for reaching out. Which Outlook version are you using? Please let us know.
+  [CUSTOMER] Outlook web for personal use
+  [SUPPORT]  Hi Etienne, please have a look here for how you can manage settings for your junk mail in Outlook Web App https://t.co/NIwV1sepV5 Please let us know if we can help you further!
+
+  ── Conversation 6255ed454a96… (5 turns) ──
+  [SUPPORT]  See how easy it is to find solutions and ask questions on our Community: https://t.co/u3hmLA8Brb
+  [CUSTOMER] Does any one at Microsoft actually care about customers?
+  [SUPPORT]  We'd be happy to assist you, Sam! Can you DM us some details on the issue you're experiencing? Thanks.
+  [CUSTOMER] Just found this reply.  Used MS help and my computer is really messed up.  I don't open IM/DM.  Supply e-mail address please.  Meed help.
+  [SUPPORT]  Hi, Sam! We'd love to help. Which version of Windows are you using? Any steps tried so far? Share us a screenshot of the error.

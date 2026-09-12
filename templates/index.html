@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AppleSupport AI Agent Test Bench</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar Navigation & Controls -->
+        <aside class="sidebar">
+            <div class="brand">
+                <div class="logo-icon"></div>
+                <div class="brand-text">
+                    <h2>AppleSupport AI</h2>
+                    <div class="status-indicator">
+                        <span class="pulse-dot"></span>
+                        <span class="status-text">Production Agent Ready</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="quick-samples">
+                <div class="section-title">
+                    <h3>Preset Test Scenarios</h3>
+                    <span class="count-badge">5 Cases</span>
+                </div>
+
+                <button class="sample-btn" onclick="sendSample('My battery drops from 80% to 10% in less than an hour on iOS 11')">
+                    <span class="sample-icon">🔋</span>
+                    <div class="sample-content">
+                        <span class="sample-title">Battery Rapid Drain</span>
+                        <span class="sample-sub">iPhone 7 • iOS 11</span>
+                    </div>
+                </button>
+
+                <button class="sample-btn" onclick="sendSample('I forgot my Apple ID password and my account is completely locked out')">
+                    <span class="sample-icon">🔒</span>
+                    <div class="sample-content">
+                        <span class="sample-title">Apple ID Lockout</span>
+                        <span class="sample-sub">Security Risk • Auto-Escalate</span>
+                    </div>
+                </button>
+
+                <button class="sample-btn" onclick="sendSample('Why was I charged $9.99 on my credit card without my authorization?')">
+                    <span class="sample-icon">💳</span>
+                    <div class="sample-content">
+                        <span class="sample-title">Unrecognized Charge</span>
+                        <span class="sample-sub">Billing • Refund Request</span>
+                    </div>
+                </button>
+
+                <button class="sample-btn" onclick="sendSample('My iPhone screen is cracked and touch is not responding')">
+                    <span class="sample-icon">📱</span>
+                    <div class="sample-content">
+                        <span class="sample-title">Cracked Screen Repair</span>
+                        <span class="sample-sub">Hardware • Genius Bar</span>
+                    </div>
+                </button>
+
+                <button class="sample-btn" onclick="sendSample('My AirPods won\'t connect to my phone and left earbud is silent')">
+                    <span class="sample-icon">🎧</span>
+                    <div class="sample-content">
+                        <span class="sample-title">AirPods Audio Issue</span>
+                        <span class="sample-sub">Bluetooth • Accessories</span>
+                    </div>
+                </button>
+            </div>
+
+            <div class="system-stats">
+                <div class="section-title">
+                    <h3>Architecture Benchmark</h3>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-row">
+                        <span class="stat-label">Classifier Accuracy</span>
+                        <span class="stat-val positive">89.5%</span>
+                    </div>
+                    <div class="progress-bar-bg"><div class="progress-fill green" style="width: 89.5%"></div></div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-row">
+                        <span class="stat-label">Escalation Safety Recall</span>
+                        <span class="stat-val positive">94.5%</span>
+                    </div>
+                    <div class="progress-bar-bg"><div class="progress-fill blue" style="width: 94.5%"></div></div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-row">
+                        <span class="stat-label">Historical Corpus</span>
+                        <span class="stat-val">75,607 Convs</span>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Chat & Inspection Area -->
+        <main class="main-content">
+            <header class="top-header">
+                <div class="header-info">
+                    <h1>AI Support Agent Inspector & Test Bench</h1>
+                    <p>Live analysis of intent classification, vector grounding, escalation reasoning, and dynamic reply generation.</p>
+                </div>
+                <div class="header-actions">
+                    <button class="action-btn" onclick="clearFeed()" title="Clear Chat Feed">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path></svg>
+                        <span>Clear Feed</span>
+                    </button>
+                </div>
+            </header>
+
+            <div class="chat-feed" id="chatFeed">
+                <!-- Welcome Card -->
+                <div class="welcome-card" id="welcomeCard">
+                    <div class="welcome-badge"> Official Support Test Bench</div>
+                    <h2>Welcome to AppleSupport AI Agent</h2>
+                    <p>Enter any customer service inquiry below or pick a preset scenario from the sidebar to test intent classification confidence, risk escalation boundaries, vector similarity retrieval, and dynamic grounded responses.</p>
+
+                    <div class="preset-chips">
+                        <span class="chip" onclick="sendSample('How do I update to iOS 11 safely?')">📲 How to update iOS?</span>
+                        <span class="chip" onclick="sendSample('My WiFi keeps disconnecting on my iPad')">📶 WiFi dropping</span>
+                        <span class="chip" onclick="sendSample('How do I buy more iCloud storage?')">☁️ iCloud storage full</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Input Controls -->
+            <div class="input-area">
+                <form id="chatForm" onsubmit="handleChatSubmit(event)">
+                    <div class="input-wrapper">
+                        <input type="text" id="userInput" placeholder="Ask @AppleSupport a customer query (e.g. My iPhone 7 battery is dying fast on iOS 11)..." autocomplete="off" required aria-label="Customer Query Input" />
+                        <button type="submit" id="sendBtn">
+                            <span>Send Query</span>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </main>
+    </div>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,145 @@
+{
+  "software_update_and_ios": {
+    "definition": "Customer issues or questions regarding iOS updates, software upgrades, beta releases, update installation failures, or post-update bugs.",
+    "positive_examples": [
+      "My iPhone 6 is stuck on the iOS 11 update screen.",
+      "Ever since I updated to iOS 11.1 my phone has been freezing constantly.",
+      "How do I install the latest software update on my iPad?"
+    ],
+    "negative_examples": [
+      "My battery is draining fast after the update."
+    ],
+    "boundary_cases": "If the message explicitly attributes a specific hardware symptom (like battery drain) to an update, primary intent is software_update_and_ios if focusing on the update process, or battery_and_power if focusing solely on power performance.",
+    "approximate_frequency_pct": 33.4
+  },
+  "battery_and_power": {
+    "definition": "Customer reports of fast battery drain, battery health degradation, charging problems, charger cables, or device shutting down unexpectedly.",
+    "positive_examples": [
+      "My battery drops from 80% to 10% in less than an hour.",
+      "iPhone won't charge when plugged into the lightning cable.",
+      "My phone keeps dying at 30% battery percentage."
+    ],
+    "negative_examples": [
+      "My phone screen is black and won't turn on."
+    ],
+    "boundary_cases": "If the device won't turn on due to a cracked screen vs dead battery, classify under hardware_and_display unless charging behavior is explicitly mentioned.",
+    "approximate_frequency_pct": 10.8
+  },
+  "app_store_and_downloads": {
+    "definition": "Problems downloading, purchasing, updating, or opening applications from the Apple App Store, or app crashing issues.",
+    "positive_examples": [
+      "I cannot download apps from the App Store, it just keeps spinning.",
+      "Twitter app keeps crashing every time I try to open it on my iPad.",
+      "Unable to purchase apps because my payment method was declined in App Store."
+    ],
+    "negative_examples": [
+      "I was billed twice for my Apple Music subscription."
+    ],
+    "boundary_cases": "If payment is declined specifically in App Store for app download, it is app_store_and_downloads. If it is an unknown credit card charge from Apple, it is apple_pay_and_billing.",
+    "approximate_frequency_pct": 10.1
+  },
+  "hardware_and_display": {
+    "definition": "Physical device damage, screen cracks, unresponsive touch screen, camera malfunction, home/power button failures, or speaker hardware issues.",
+    "positive_examples": [
+      "My iPhone screen is cracked and touch isn't responding.",
+      "The front camera on my iPhone 7 displays a black screen when opened.",
+      "My home button stopped clicking after dropping the phone."
+    ],
+    "negative_examples": [
+      "My Bluetooth headphones won't pair with my phone."
+    ],
+    "boundary_cases": "Physical button failure is hardware_and_display, while volume/sound issues caused by software settings belong to audio_and_airpods.",
+    "approximate_frequency_pct": 7.2
+  },
+  "itunes_and_apple_music": {
+    "definition": "Inquiries or technical issues regarding iTunes music sync, Apple Music streaming, playlist loss, or local media library management.",
+    "positive_examples": [
+      "All my downloaded songs disappeared from Apple Music library.",
+      "iTunes on Windows won't recognize my iPhone when connected via USB.",
+      "How do I sync my music playlist from my Mac to my iPhone?"
+    ],
+    "negative_examples": [
+      "How do I back up my device photos to iCloud?"
+    ],
+    "boundary_cases": "Syncing music specifically via iTunes/Apple Music is itunes_and_apple_music. General iCloud device backup is icloud_and_storage.",
+    "approximate_frequency_pct": 5.1
+  },
+  "connectivity_and_cellular": {
+    "definition": "Issues with Wi-Fi connectivity, Bluetooth pairing, cellular network signal, 'No SIM Installed' errors, or AirDrop failures.",
+    "positive_examples": [
+      "My iPhone keeps disconnecting from home Wi-Fi network.",
+      "Getting 'No SIM Card Installed' error on my iPhone 6s.",
+      "Bluetooth won't turn on or discover any nearby devices."
+    ],
+    "negative_examples": [
+      "My AirPods keep dropping connection."
+    ],
+    "boundary_cases": "If Bluetooth disconnects specifically affect AirPods/headphones, classify under audio_and_airpods. General Bluetooth pairing with cars/speakers is connectivity_and_cellular.",
+    "approximate_frequency_pct": 4.6
+  },
+  "apple_id_and_security": {
+    "definition": "Forgotten passwords, Apple ID account lockouts, two-factor authentication code issues, passcode recovery, or security verification.",
+    "positive_examples": [
+      "I forgot my Apple ID password and my account is locked.",
+      "Not receiving two-factor verification code on my trusted phone number.",
+      "I got locked out of my iPhone because I forgot my passcode."
+    ],
+    "negative_examples": [
+      "I want to change my credit card on my account."
+    ],
+    "boundary_cases": "If account is locked due to security/passcode, it is apple_id_and_security. If user wants to edit billing methods, it is apple_pay_and_billing.",
+    "approximate_frequency_pct": 3.9
+  },
+  "icloud_and_storage": {
+    "definition": "iCloud storage full warnings, photo backup/sync issues, cloud drive access, or device storage management.",
+    "positive_examples": [
+      "My iCloud storage is full and my photos won't back up.",
+      "How do I buy more iCloud storage space on my phone?",
+      "iCloud photo library is not syncing between my iPad and iPhone."
+    ],
+    "negative_examples": [
+      "I can't download a 2GB game from the App Store."
+    ],
+    "boundary_cases": "Device local storage vs iCloud cloud storage: if mentioning iCloud explicitly, classify as icloud_and_storage.",
+    "approximate_frequency_pct": 3.6
+  },
+  "apple_pay_and_billing": {
+    "definition": "Unexpected charges, refund requests for purchases, Apple Pay contactless payment failures, or subscription renewals.",
+    "positive_examples": [
+      "I saw an unauthorized charge of $9.99 from Apple on my bank statement.",
+      "How do I request a refund for an accidental subscription renewal?",
+      "Apple Pay was declined at the store checkout terminal."
+    ],
+    "negative_examples": [
+      "My App Store app download failed."
+    ],
+    "boundary_cases": "Unrecognized financial charges or refund requests belong to apple_pay_and_billing.",
+    "approximate_frequency_pct": 2.9
+  },
+  "audio_and_airpods": {
+    "definition": "Sound quality, volume level issues, microphone failures during calls, or AirPods connectivity and charging case issues.",
+    "positive_examples": [
+      "My right AirPod is much quieter than the left one.",
+      "People cannot hear me during phone calls, microphone is distorted.",
+      "AirPods won't charge inside the charging case."
+    ],
+    "negative_examples": [
+      "My phone speaker doesn't work after water damage."
+    ],
+    "boundary_cases": "Physical water damage to speaker hardware is hardware_and_display, whereas AirPods specific audio/charging issues are audio_and_airpods.",
+    "approximate_frequency_pct": 1.7
+  },
+  "general_inquiry_or_other": {
+    "definition": "General product inquiries, trade-in questions, store location queries, shipping status of Apple Store orders, or non-technical support questions.",
+    "positive_examples": [
+      "Will the Apple Store be open tomorrow on Thanksgiving?",
+      "How much trade-in value can I get for my iPhone 7?",
+      "When will my Apple order ship to my home address?"
+    ],
+    "negative_examples": [
+      "My iPhone 6 is stuck on the iOS update screen."
+    ],
+    "boundary_cases": "Any query that does not fall into technical support categories or is a general customer service question.",
+    "approximate_frequency_pct": 16.7
+  }
+}
